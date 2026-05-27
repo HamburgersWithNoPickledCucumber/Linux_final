@@ -1,11 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-from __future__ import print_function
 import os
 import sys
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer, test as _test
+from http.server import BaseHTTPRequestHandler, HTTPServer
 import subprocess
-from SocketServer import ThreadingMixIn
+from socketserver import ThreadingMixIn
 import argparse
 
 
@@ -22,19 +21,19 @@ class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
 class MainHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         try:
-            data = ''
+            data = b''
             contentType = 'text/html'
             if self.path.startswith("/server/"):
                 module = self.path.split('=')[1]
                 output = subprocess.Popen(
                     appRootPath + modulesSubPath + " " + module,
-                    shell = True,
-                    stdout = subprocess.PIPE)
+                    shell=True,
+                    stdout=subprocess.PIPE)
                 data = output.communicate()[0]
             else:
                 if self.path == '/':
                     self.path = 'index.html'
-                f = open(appRootPath + os.sep + self.path)
+                f = open(appRootPath + os.sep + self.path, 'rb')
                 data = f.read()
                 if self.path.startswith('/linuxDash.min.css'):
                     contentType = 'text/css'
@@ -50,5 +49,5 @@ class MainHandler(BaseHTTPRequestHandler):
 if __name__ == '__main__':
     args = parser.parse_args()
     server = ThreadedHTTPServer(('0.0.0.0', args.port), MainHandler)
-    print('Starting server, use <Ctrl-C> to stop')
+    print('Starting server on 0.0.0.0:{}, use <Ctrl-C> to stop'.format(args.port))
     server.serve_forever()
