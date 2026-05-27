@@ -1,21 +1,33 @@
 html {
-  margin-top: 0px;
+  margin-top: 0;
   padding-top: 0;
-
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
 body {
-  letter-spacing: .1rem;
-  font-family: 'Merriweather', Arial, sans-serif;
+  font-family: 'Space Mono', 'JetBrains Mono', 'Courier New', monospace;
+  letter-spacing: .05rem;
   padding: 0;
   margin: 0;
+  background: #1a1d23;
+  color: #c8ccd4;
 }
 
 .centered {
   margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1d23;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2d35;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3e47;
 }

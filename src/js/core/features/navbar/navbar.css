@@ -1,10 +1,14 @@
 nav-bar {
   display: block;
-  background-color: #f6f8f8;
-  height: 40px;
-  padding-left: 10%;
-  padding-top: 3px;
+  background: #21242b;
+  height: 44px;
+  padding-left: 5%;
+  padding-top: 0;
   padding-right: 5%;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.4),
+    0 -1px 2px rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid #2a2d35;
 }
 
 nav-bar ul {
@@ -15,23 +19,25 @@ nav-bar ul {
 }
 
 nav-bar ul li a {
-  font-size: 11px;
+  font-size: 10px;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 2.3rem;
-  color: grey;
+  line-height: 2.8rem;
+  color: #6b7080;
+  letter-spacing: .1rem;
+  font-weight: 600;
 }
 
 nav-bar ul li a:hover {
-  color: rgb(0,0,0);
+  color: #00b894;
 }
 
 nav-bar ul li.active {
-  border-bottom: 2px solid #009587;
+  border-bottom: 2px solid #00b894;
 }
 
 nav-bar ul li.active a {
-  color: #009587;
+  color: #00b894;
 }
 
 nav-bar ul li {
@@ -42,12 +48,13 @@ nav-bar ul li {
 }
 
 nav-bar .title {
-  color: #009587;
-  font-weight: 300;
-  font-size: 20px;
-  letter-spacing: .1rem;
+  color: #00b894;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: .15rem;
   float: left;
-  padding-top: 5px;
+  padding-top: 8px;
+  text-transform: uppercase;
 }
 
 nav-bar .right-content {
@@ -56,11 +63,11 @@ nav-bar .right-content {
 
 nav-bar .right-content,
 nav-bar .right-content a {
-  font-size: 11px;
-  color: grey;
-  padding-top: 10px;
+  font-size: 10px;
+  color: #6b7080;
+  padding-top: 12px;
 }
 
 nav-bar .right-content a:hover {
-  color: #000;
+  color: #00b894;
 }

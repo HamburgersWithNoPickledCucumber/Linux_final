@@ -7,28 +7,34 @@
 .table-data-plugin .filter:focus,
 .table-data-plugin .filter:active {
   height: 20px;
-  padding: 5px;
+  padding: 6px 5px;
   margin: 5px;
   border: none;
   outline-color: transparent;
-  background: transparent;
+  background: #1a1d23;
+  color: #c8ccd4;
   width: 100%;
   margin: 0;
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
+  font-family: 'Space Mono', 'JetBrains Mono', monospace;
+  border-radius: 6px;
+  box-shadow:
+    inset 2px 2px 4px rgba(0, 0, 0, 0.5),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.02);
 }
 
 .table-data-plugin .filter:focus {
-  border-bottom: 1px solid #ff5722;
+  border-bottom: 1px solid #00b894;
 }
 
 .table-data-plugin thead tr th a,
 .table-data-plugin thead tr th a:visited {
-  color: black;
+  color: #00b894;
   text-decoration: none;
 }
 
 .table-data-plugin .column-sort-caret {
   font-size: 10px;
-  color: #1EAEDB;
+  color: #00b894;
 }

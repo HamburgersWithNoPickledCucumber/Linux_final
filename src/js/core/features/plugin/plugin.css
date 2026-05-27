@@ -1,26 +1,25 @@
-
 .plugin {
-  transition: all .1s linear;
-
+  transition: all .2s ease;
   vertical-align: text-top;
   width: 400px;
   display: inline-block;
   padding: 0;
-  color: black;
+  color: #c8ccd4;
   text-align: center;
-  border-radius: 2px;
-  box-shadow: 0 1px 10px rgba(0,0,0,.13),0px 5px 10px rgba(0,0,0,.16);
-  margin: 30px 15px 0 0;
+  border-radius: 12px;
+  background: #21242b;
+  box-shadow:
+    8px 8px 16px rgba(0, 0, 0, 0.5),
+    -4px -4px 8px rgba(255, 255, 255, 0.03);
+  margin: 20px 15px 20px 0;
   max-height: 400px;
   overflow: hidden;
-
   resize: both;
   padding-bottom: 15px;
-  background-color: rgba(0,0,0,0.015);
 }
 
 .plugin-hidden .top-bar .heading {
-  color: grey;
+  color: #4a4f5a;
   font-style: italic;
 }
 
@@ -32,8 +31,7 @@
   .plugin {
     max-width: 80%;
     float: none;
-    margin: 0 auto;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
   }
 
   .plugin-body {
@@ -47,7 +45,7 @@
 
 @media (max-width: 950px) {
   .plugin {
-    margin: 15px 10px 0 0;
+    margin: 15px 10px 20px 10px;
   }
   .plugin-enlarged {
     width: 90%;
@@ -55,19 +53,20 @@
 }
 
 .plugin.chart-plugin {
-  padding: 0px;
+  padding: 0;
   resize: none;
   padding-bottom: 0;
 }
 
 .plugin-body {
-  background-color: #fff;
+  background: #21242b;
   height: 323px;
   font-size: 12px;
   padding: 10px;
   line-height: 30px;
   overflow: auto;
-  border-top: 1px solid #ececec;
+  border-top: 1px solid #2a2d35;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .plugin.chart-plugin,
@@ -80,25 +79,25 @@
   height: 263px;
 }
 
-.plugin last-update{
+.plugin last-update {
   font-size: 11px;
   float: left;
 }
 
 .plugin ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 .plugin ::-webkit-scrollbar-track {
-  background: #eee;
-  border: thin solid lightgray;
-  box-shadow: 0px 0px 3px #dfdfdf inset;
+  background: #1a1d23;
+  border: thin solid #2a2d35;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
 }
 .plugin ::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.1);
-  border: thin solid rgba(0,0,0,0.1);
-  border-radius: 0;
+  background: #3a3e47;
+  border: thin solid #2a2d35;
+  border-radius: 3px;
 }
 .plugin ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0,0,0,0.2);
+  background: #4a4f5a;
 }
