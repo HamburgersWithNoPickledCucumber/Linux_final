@@ -1,0 +1,103 @@
+.plugin {
+  transition: all .2s ease;
+  vertical-align: text-top;
+  width: 400px;
+  display: inline-block;
+  padding: 0;
+  color: var(--text);
+  text-align: center;
+  border-radius: 12px;
+  background: var(--bg-card);
+  box-shadow:
+    8px 8px 16px var(--shadow-heavy),
+    -4px -4px 8px var(--shadow-light);
+  margin: 20px 15px 20px 0;
+  max-height: 400px;
+  overflow: hidden;
+  resize: both;
+  padding-bottom: 15px;
+}
+
+.plugin-hidden .top-bar .heading {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.plugin-enlarged {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .plugin {
+    max-width: 80%;
+    float: none;
+    margin: 0 auto 10px auto;
+  }
+
+  .plugin-body {
+    max-height: 323px;
+  }
+
+  .plugin-enlarged {
+    width: 80%;
+  }
+}
+
+@media (max-width: 950px) {
+  .plugin {
+    margin: 15px 10px 20px 10px;
+  }
+  .plugin-enlarged {
+    width: 90%;
+  }
+}
+
+.plugin.chart-plugin {
+  padding: 0;
+  resize: none;
+  padding-bottom: 0;
+}
+
+.plugin-body {
+  background: var(--bg-card);
+  height: 323px;
+  font-size: 12px;
+  padding: 10px;
+  line-height: 30px;
+  overflow: auto;
+  border-top: 1px solid var(--border);
+  box-shadow: inset 0 2px 4px var(--shadow-heavy);
+}
+
+.plugin.chart-plugin,
+.plugin.chart-plugin .plugin-body {
+  overflow: hidden;
+  padding: 0;
+}
+
+.plugin-body-short {
+  height: 263px;
+}
+
+.plugin last-update {
+  font-size: 11px;
+  float: left;
+}
+
+.plugin ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.plugin ::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border: thin solid var(--border);
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
+}
+.plugin ::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border: thin solid var(--border);
+  border-radius: 3px;
+}
+.plugin ::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover);
+}

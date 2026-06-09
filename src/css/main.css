@@ -1,0 +1,84 @@
+/* ============================================
+   Dark Theme (default)
+   ============================================ */
+:root {
+  --bg: #1a1d23;
+  --bg-card: #21242b;
+  --bg-card-alt: #1c1f25;
+  --text: #c8ccd4;
+  --text-muted: #6b7080;
+  --text-dim: #888d98;
+  --accent: #00b894;
+  --accent-dim: #006666;
+  --border: #2a2d35;
+  --border-light: #1f2228;
+  --hover-bg: #25282f;
+  --input-bg: #1a1d23;
+  --scrollbar-track: #1a1d23;
+  --scrollbar-thumb: #2a2d35;
+  --scrollbar-hover: #3a3e47;
+  --shadow-heavy: rgba(0, 0, 0, 0.5);
+  --shadow-light: rgba(255, 255, 255, 0.04);
+  --shadow-inset: rgba(0, 0, 0, 0.6);
+  --accent-glow: rgba(0, 184, 148, 0.3);
+}
+
+/* ============================================
+   Light Theme
+   ============================================ */
+[data-theme="light"] {
+  --bg: #f0f2f5;
+  --bg-card: #ffffff;
+  --bg-card-alt: #f7f8fa;
+  --text: #2d3239;
+  --text-muted: #8b909a;
+  --text-dim: #9aa0aa;
+  --accent: #00a382;
+  --accent-dim: #00b894;
+  --border: #dde0e4;
+  --border-light: #eef0f2;
+  --hover-bg: #eef0f2;
+  --input-bg: #e8eaed;
+  --scrollbar-track: #e0e3e7;
+  --scrollbar-thumb: #c0c4ca;
+  --scrollbar-hover: #a0a4aa;
+  --shadow-heavy: rgba(0, 0, 0, 0.06);
+  --shadow-light: rgba(0, 0, 0, 0.03);
+  --shadow-inset: rgba(0, 0, 0, 0.08);
+  --accent-glow: rgba(0, 163, 130, 0.15);
+}
+
+html {
+  margin-top: 0;
+  padding-top: 0;
+  transition: all 1s ease;
+}
+
+body {
+  font-family: 'Space Mono', 'JetBrains Mono', 'Courier New', monospace;
+  letter-spacing: .05rem;
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover);
+}

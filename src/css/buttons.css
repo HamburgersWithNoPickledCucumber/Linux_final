@@ -1,0 +1,26 @@
+button {
+  outline: none;
+  font-family: 'Space Mono', 'JetBrains Mono', 'Courier New', monospace;
+  background: var(--bg-card);
+  color: var(--text);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  box-shadow:
+    3px 3px 6px var(--shadow-heavy),
+    -2px -2px 4px var(--shadow-light);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  box-shadow:
+    2px 2px 4px var(--shadow-heavy),
+    -1px -1px 3px var(--shadow-light);
+}
+
+button:active {
+  box-shadow:
+    inset 3px 3px 6px var(--shadow-inset),
+    inset -2px -2px 4px var(--shadow-light);
+}
