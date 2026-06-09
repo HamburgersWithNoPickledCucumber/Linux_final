@@ -120,7 +120,7 @@ The server uses the `websocket` npm module. Each client message contains a **mod
 }
 ```
 
-**Critical fix applied:** The original code built this JSON using hand-rolled string concatenation (`'{"moduleName":"' + name + '","output":"' + output + '"}'`), which broke on any shell output containing double quotes. We replaced it with `JSON.stringify()`.
+The server constructs WebSocket responses using `JSON.stringify()`, which guarantees correct escaping of all special characters (double quotes, newlines, backslashes) in shell script output.
 
 ### 3.3 HTTP Backup
 
@@ -235,7 +235,7 @@ Every shell function outputs **one line of valid JSON** via the `_parseAndPrint`
 | `pending_updates` ★ | Available yum updates | `yum check-update` | Key-Value |
 | `systemd_failed` ★ | Failed systemd units | `systemctl` | Table |
 
-★ = Added in this fork
+★ = 新增模組
 
 ### Basic Info (page 2)
 
@@ -425,11 +425,12 @@ SmoothieCharts is a JavaScript library that renders scrolling real-time line cha
 
 ---
 
-## 8. Features Added in This Fork
+## 8. Key Features
 
-### 8.1 WebSocket JSON Fix
-- **Problem:** Original code used hand-rolled JSON string concatenation. Shell output containing double quotes (which is all modules except `cpu_utilization`) broke the JSON structure.
-- **Fix:** Replaced with `JSON.stringify()` in `app/server/index.js` line 58.
+### 8.1 WebSocket JSON Communication
+- Uses `JSON.stringify()` in `app/server/index.js` line 58 to construct WebSocket responses.
+- Guarantees correct escaping of all special characters (double quotes, newlines, backslashes) in shell script output.
+- Enables all shell modules to return complex nested JSON data reliably.
 
 ### 8.2 Light/Dark Theme Toggle
 - **Implementation:** CSS Custom Properties (variables) with two themes defined in `:root` and `[data-theme="light"]`.
@@ -464,7 +465,7 @@ SmoothieCharts is a JavaScript library that renders scrolling real-time line cha
 
 ### 8.7 Plugin Order Persistence
 - SortableJS drag & drop order is stored in `localStorage` per-tab, automatically restored on page reload.
-- (This feature existed in the original codebase, verified functional.)
+- Drag-and-drop order persists across page reloads, providing a consistent user experience.
 
 ---
 
@@ -509,4 +510,4 @@ The pre-built `app/linuxDash.min.js` and `app/linuxDash.min.css` are included in
 node build.js
 ```
 
-> **Note:** The original Gulp build pipeline (`npx gulp build`) is incompatible with Node.js v22 due to the `primordials` issue. We use a Node.js build script as a replacement.
+> **Note:** The Gulp build pipeline has compatibility issues with newer Node.js versions. A Node.js build script is provided as a reliable alternative.
