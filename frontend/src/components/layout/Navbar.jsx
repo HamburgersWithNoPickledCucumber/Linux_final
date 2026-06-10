@@ -33,9 +33,7 @@ export default function Navbar() {
         </div>
       </div>
       <div className={styles.external}>
-        <a href="https://github.com/afaqurk/linux-dash" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <span>|</span>
-        <a href="https://github.com/afaqurk/linux-dash/wiki" target="_blank" rel="noopener noreferrer">Docs</a>
+        <span>Linux Board v2.0</span>
       </div>
     </nav>
   );
