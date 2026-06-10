@@ -1,0 +1,43 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.barLabel {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+}
+
+.barTrack {
+  height: 10px;
+  background: var(--bg-input);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 300ms ease;
+}
+
+.green { background: var(--accent); }
+.yellow { background: var(--warning); }
+.red { background: var(--danger); }
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}

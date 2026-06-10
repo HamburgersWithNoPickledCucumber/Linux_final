@@ -1,0 +1,91 @@
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+.table th {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 2px solid var(--border);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+.table th:hover {
+  color: var(--text-primary);
+}
+
+.sortIcon {
+  margin-left: 4px;
+  font-size: 0.6rem;
+}
+
+.table td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+  white-space: nowrap;
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table tr:hover td {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.searchBar {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 6px 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.searchInput:focus {
+  border-color: var(--accent);
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.metrics {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}

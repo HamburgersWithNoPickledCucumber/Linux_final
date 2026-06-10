@@ -1,0 +1,40 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  gap: 12px;
+}
+
+.key {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-primary);
+  text-align: right;
+  word-break: break-all;
+  max-width: 65%;
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}

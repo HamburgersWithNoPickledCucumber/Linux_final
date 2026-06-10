@@ -1,0 +1,66 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 48px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  gap: 2px;
+}
+
+.link {
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: background var(--transition), color var(--transition);
+}
+
+.link:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+}
+
+.active {
+  background: rgba(0, 184, 148, 0.1) !important;
+  color: var(--accent) !important;
+}
+
+.external {
+  display: flex;
+  gap: 12px;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.external a {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+
+.external a:hover {
+  color: var(--text-primary);
+}
