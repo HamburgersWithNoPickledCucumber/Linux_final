@@ -48,12 +48,13 @@ nav-bar ul li {
 }
 
 nav-bar .title {
+  font-family: 'Orbitron', 'Space Mono', 'JetBrains Mono', monospace;
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
-  letter-spacing: .15rem;
+  letter-spacing: .2rem;
   float: left;
-  padding-top: 8px;
+  padding-top: 6px;
   text-transform: uppercase;
 }
 
