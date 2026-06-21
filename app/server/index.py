@@ -6,6 +6,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import subprocess
 from socketserver import ThreadingMixIn
 import argparse
+import mimetypes
 
 
 parser = argparse.ArgumentParser(description='Simple Threaded HTTP server to run linux-dash.')
@@ -33,10 +34,11 @@ class MainHandler(BaseHTTPRequestHandler):
             else:
                 if self.path == '/':
                     self.path = 'index.html'
-                f = open(appRootPath + os.sep + self.path, 'rb')
+                safePath = self.path.split('?', 1)[0].lstrip('/')
+                filePath = os.path.join(appRootPath, safePath)
+                f = open(filePath, 'rb')
                 data = f.read()
-                if self.path.startswith('/linuxDash.min.css'):
-                    contentType = 'text/css'
+                contentType = mimetypes.guess_type(filePath)[0] or 'application/octet-stream'
                 f.close()
             self.send_response(200)
             self.send_header('Content-type', contentType)
